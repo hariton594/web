@@ -14,5 +14,8 @@ while True:
 			print('get close')                                         
                 	conn.close()
 		print('sending', data)
-		conn.send(data)                                                
+		conn.send(data)
+		print('close')
+		conn.close()
+		break                                                
 	
