@@ -13,5 +13,6 @@ while True:
 		if data=='close' :
 			print('get close')                                         
                 	conn.close()
+		print('sending', data)
 		conn.send(data)                                                
 	
