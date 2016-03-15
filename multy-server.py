@@ -9,7 +9,9 @@ while True:
 	print('new connection', addr)                                                        
 	while True:                                                                    
                 data = conn.recv(1024)                                          
-                if data=='close' :
+                if not data : break
+		if data=='close' :
 			print('get close')                                         
-                	conn.send(data)                                                
-	conn.close()
+                	conn.close()
+		conn.send(data)                                                
+	
