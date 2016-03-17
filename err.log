@@ -1,0 +1,32 @@
+2016-03-18 01:40:54 [5395] [INFO] Starting gunicorn 17.5
+2016-03-18 01:40:54 [5395] [INFO] Listening at: http://0.0.0.0:8000 (5395)
+2016-03-18 01:40:54 [5395] [INFO] Using worker: sync
+2016-03-18 01:40:54 [5400] [INFO] Booting worker with pid: 5400
+2016-03-18 01:40:54 [5400] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 473, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 100, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/base.py", line 115, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 33, in load
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 362, in import_app
+    __import__(module)
+ImportError: No module named ask.wsgi
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/arbiter.py", line 473, in spawn_worker
+    worker.init_process()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/base.py", line 100, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/base.py", line 115, in wsgi
+    self.callable = self.load()
+  File "/usr/lib/python2.7/dist-packages/gunicorn/app/wsgiapp.py", line 33, in load
+    return util.import_app(self.app_uri)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 362, in import_app
+    __import__(module)
+ImportError: No module named ask.wsgi
+2016-03-18 01:40:54 [5400] [INFO] Worker exiting (pid: 5400)
+2016-03-18 01:40:54 [5395] [INFO] Shutting down: Master
+2016-03-18 01:40:54 [5395] [INFO] Reason: Worker failed to boot.
